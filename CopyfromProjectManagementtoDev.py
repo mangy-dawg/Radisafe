@@ -1,3 +1,4 @@
+# - This is multi purpose code which can be used to copy any table from any DB to any DB on the same server
 # Copy a table from ProjectManagement to Dev using Azure AD Interactive auth (popup)
 # - Prompts an AAD sign-in window with the username prefilled
 # - Creates the target schema/table (incl. IDENTITY) if missing
@@ -18,8 +19,8 @@ import pyodbc
 SERVER = "radiancesqlserver.database.windows.net"   # e.g., "myserver.database.windows.net"
 SRC_DB = "ProjectManagement"
 DST_DB = "Dev"
-SCHEMA = "dim"
-TABLE = "Employees"
+SCHEMA = "fact"
+TABLE = "GatePass"
 AAD_USER = "navpm@radiancerenewables.com"  # prefill this in the popup
 
 # Build an AAD Interactive connection string that triggers the sign-in popup
